@@ -6,11 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Invenia Virtual Viewer</title>
     <style>
-        html, body{ position: relative; overflow: hidden; padding: 0; margin: 0;}
+        html, body{ position: relative; padding: 0; margin: 0;}
         *{outline: none;}
-        .block{width: 100%; height: 100vh; position: relative;}
-        .block__video{width: 100%; height: 100%; object-fit: cover; object-position: center center;}
-        .block__content{position: absolute; z-index: 3; display: block; top: 35%; left: 11%; max-width: 566px;}
+        .block{width: 100%; min-height: 100vh; position: relative;}
+        .block__video{width: 100%; height: 100vh; object-fit: cover; object-position: center center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;}
+        .block__content{position: relative; z-index: 3; display: block; left: 11%; max-width: 566px; min-height: 100vh;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: flex-start;
+            -ms-flex-line-pack: start;
+            align-content: flex-start;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+        }
         .block__content img{max-width: 100%; width: 100%; height: auto;}
         .block__btn{display: block; margin-top: 90px; max-width: 380px;}
         @media (min-width: 4000px) and (max-width: 5200px) {
