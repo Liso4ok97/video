@@ -13,7 +13,14 @@
         .block__content{position: absolute; z-index: 3; display: block; top: 35%; left: 11%; max-width: 566px;}
         .block__content img{max-width: 100%; width: 100%; height: auto;}
         .block__btn{display: block; margin-top: 90px; max-width: 380px;}
-
+        @media (min-width: 4000px) and (max-width: 5200px) {
+            .block__content{max-width: 1180px;}
+            .block__btn {margin-top: 200px; max-width: 80%;}
+        }
+        @media (min-width: 2800px) and (max-width: 3172px) {
+            .block__content{max-width: 800px;}
+            .block__btn {margin-top: 180px; max-width: 520px;}
+        }
         @media screen and (max-width: 1200px) {
             .block__video{object-position: 30% center;}
         }
