@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invenia Virtual Viewer</title>
+    <style>
+        html, body{
+            position: relative;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+        }
+        *{
+            outline: none;
+        }
+        .block{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .block__video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left center;
+        }
+        .block__content{
+            position: absolute;
+            z-index: 3;
+            display: block;
+            top: 35%;
+            left: 11%;
+            max-width: 566px;
+        }
+        .block__content img{
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+        .block__btn{
+            display: block;
+            margin-top: 90px;
+            max-width: 380px;
+
+        }
+
+        @media screen and (max-width: 1200px) {
+            .block__video{
+                object-position: 30% center;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            .block__video {
+                object-position: 60% center;
+            }
+            .block__content{
+                left: 0;
+                padding: 0 10%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="block">
+    <video class="block__video" loop autoplay poster="poster.jpg">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <div class="block__content">
+        <img src="text.png" alt="3D ABUS Invenia Virtual Viewer">
+        <a href="https://support.goto.com/webinar/system-check-attendee" target="_blank" class="block__btn">
+            <img src="btn.png" alt="VIRTUAL VIEWER">
+        </a>
+    </div>
+
+</div>
+</body>
+</html>
